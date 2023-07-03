@@ -1,0 +1,48 @@
+let font,
+  fontsize = 40;
+let w = 400;
+let h = 400;
+
+
+
+function setup() {
+  createCanvas(w, h);
+
+  // Set text characteristics
+  textFont('Georgia');
+  textSize(fontsize);
+}
+
+function draw() {
+  b = 90
+  background(b);
+ // fill('red');
+ // circle(w * 0.5, h * 0.5, w);
+  
+  textSize(height / 12)
+  fill(0);
+  spacing_offset = w/6
+  
+  // Align the text to the right
+  // and run drawWords() in the left third of the canvas
+  textAlign(LEFT);
+  text('Captivated', 1/4*w,  (spacing_offset * 1 - 1/30*w));
+  text('Persistence', 1/12*w, (spacing_offset * 2 - 1/30*w));
+  text('Yard', 1/30*w,  (spacing_offset * 3 - 1/30*w));
+  text("Who's Scrawny Now?", 1/30*w, (spacing_offset * 4 - 1/30*w));
+  text("Bad Words", 1/8*w, (spacing_offset * 5.1 - 1/30*w));
+
+  // Align the text to the left
+  // and run drawWords() in the right third of the canvas
+  textAlign(RIGHT);
+  rh_offset = 2/30*w
+  spacing_offset = 5/30*w
+  side_b = 1/20*w
+  text('Gwdihw', w - rh_offset - rh_offset, side_b + (spacing_offset * 1.1));
+  fill(255);
+  text('Impermanence', w - rh_offset,  side_b + (spacing_offset * 2));
+  fill(0);
+  text('Real Alien', w - rh_offset + rh_offset/2, side_b + (spacing_offset * 3 - 5));
+  text('Cop Shocks', w - rh_offset - rh_offset*0.25, side_b + (spacing_offset * 4+ 5 ));
+  text('Every Page', 6/8*w, side_b + (spacing_offset * 5.2));
+}
